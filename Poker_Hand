@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{//rank A23456789TJQK. suit CDHS.
+	char rank[5];
+	char suit[5];
+	char card[3];
+	int i,j;
+	int num = 1;
+	int maxnum = 1;
+	for(i=0;i<5;i++){
+		scanf("%s",card);
+		rank[i]=card[0];
+		suit[i]=card[1];
+	}
+	
+	for(i=0;i<5;i++){
+		for(j=i+1;j<5;j++){
+			if(rank[i]==rank[j]){
+				num++;
+			}
+		}
+		if(num > maxnum){
+			maxnum = num;
+		}
+		num = 1;
+	}
+	printf("%d\n",maxnum);
+
+	return 0;
+}
