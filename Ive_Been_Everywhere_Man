@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char **argv)
+{
+	int i,j,n,num,count,a,b;
+	scanf("%d",&n);
+	int result[n];
+	for(i=0;i<n;i++){
+		scanf("%d",&num);
+		char cities[num][21];
+		for(j=0;j<num;j++){
+			scanf("%s",cities[j]);
+		}
+		count = num;
+		for(a=0;a<num;a++){
+			for(b=a+1;b<num;b++){
+				if(strcmp(cities[a],cities[b])==0){
+					count=count-1;
+					b=num;
+				}
+			}
+		}
+		result[i] = count;
+	}
+	
+	for(i=0;i<n;i++){
+		printf("%d\n",result[i]);
+	}
+	return 0;
+}
