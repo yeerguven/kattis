@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(int argc, char **argv)
+{
+	int n,i,p;
+	int x=0;
+	scanf("%d",&n);
+	for(i=0;i<n;i++){
+		scanf("%d",&p);
+		x = x + pow((p/10),(p%10));
+	}
+	printf("%d\n",x);
+	return 0;
+}
