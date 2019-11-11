@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    char fullname[101];
+    char firstletters[101];
+    int i=0;
+    int j=0;
+    scanf("%s",fullname);
+
+    firstletters[j] = fullname[0];
+    j++;
+    while(fullname[i]!='\0'){
+        if(fullname[i]=='-'){
+            firstletters[j] = fullname[i+1];
+            j++;
+        }
+
+        i++;
+    }
+
+    printf("%s\n",firstletters);
+    return 0;
+}
