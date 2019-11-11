@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	int i,r,e,c,n;
+	scanf("%d",&n);
+	char *words[n];
+	char  aw[20] = "advertise";
+	char  bw[20] = "does not matter";
+	char  cw[20] = "do not advertise";
+	
+	for(i=0;i<n;i++){
+		scanf("%d %d %d",&r,&e,&c);
+		if(e-c>r){
+			words[i]=aw;
+		}else if(e-c == r){
+			words[i]=bw;
+		}else{
+			words[i]=cw;
+		}
+	}
+	
+	for(i=0;i<n;i++){
+		printf("%s\n",words[i]);
+	}
+	
+	return 0;
+}
