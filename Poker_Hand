@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main(int argc, char **argv)
-{//rank A23456789TJQK. suit CDHS.
+{
 	char rank[5];
 	char suit[5];
 	char card[3];
