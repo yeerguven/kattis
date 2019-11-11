@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+int main(int argc, char **argv)
+{
+
+	int n,w,h,i;
+	double x = 0.0;
+	scanf("%d %d %d",&n,&w,&h);
+	int m[n];
+	for(i=0;i<n;i++){
+		scanf("%d",&m[i]);
+	}
+	for(i=0;i<n;i++){
+		x = sqrt(w*w + h*h);
+		if(((double) m[i])<= x){
+			printf("DA\n");
+		}else{
+			printf("NE\n");
+		}
+		
+	}
+	return 0;
+}
