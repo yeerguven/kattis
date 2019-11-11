@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main()
+{
+	int n=0;
+	int h=0;
+	int v=0;
+	int hmax=0;
+	int vmax=0;
+
+	scanf("%d %d %d",&n,&h,&v);
+
+	if(2<=n && n<=10000 && 0<=h && h<=n && 0<=v && v<=n){
+		if(n-h<=h){
+			hmax=h;
+		}else{
+			hmax=n-h;
+		}
+		if(n-v<=v){
+			vmax=v;
+		}else{
+			vmax=n-v;
+		}
+		printf("%d\n",hmax*vmax*4);
+		return 0;
+	}else{
+		return 0;
+	}
+}
