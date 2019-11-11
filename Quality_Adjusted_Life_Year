@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	int n,i;
+	double q,y;
+	double sum = 0.0;
+	scanf("%d",&n);
+	for(i=0;i<n;i++){
+		scanf("%lf %lf",&q,&y);
+		sum = sum + q*y;
+	}
+	printf("%.3lf\n",sum);
+}
