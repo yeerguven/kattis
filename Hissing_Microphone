@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	char words[31];
+	int i;
+	int isS=0;
+	scanf("%s",words);
+	for(i=0;i<30;i++){
+		if(words[i]==words[i+1] && words[i] == 's'){
+			isS=1;
+			i=30;
+		}
+	}
+	if(isS){
+		printf("hiss\n");
+	}else{
+		printf("no hiss\n");
+	}
+	return 0;
+}
