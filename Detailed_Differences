@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+char difWord(char, char);
+int main(int argc, char **argv)
+{
+	int n,i,j;
+	scanf("%d",&n);
+	char words[n][51];
+	char words_dif[n][51];
+	char result[n][51];
+	for(i=0;i<n;i++){
+		scanf("%s",words[i]);
+		scanf("%s",words_dif[i]);
+		j=0;
+		while(words[i][j]!='\0' || words_dif[i][j]!='\0'){
+			result[i][j]=difWord(words[i][j],words_dif[i][j]);
+			j++;
+		}
+		result[i][j]='\0';
+	}
+	for(i=0;i<n;i++){
+		printf("%s\n",words[i]);
+		printf("%s\n",words_dif[i]);
+		printf("%s\n\n",result[i]);
+	}
+	return 0;
+}
+
+char difWord(char word1, char word2){
+
+	char result;
+
+	if(word1 == word2){
+		result='.';
+	}else{
+		result='*';
+	}
+
+	return result;
+}
