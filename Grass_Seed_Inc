@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	double bigC;
+	scanf("%lf",&bigC);
+	int num,i;
+	double cost=0.0;
+	double w,l;
+	scanf("%d",&num);
+	for(i=0;i<num;i++){
+		scanf("%lf %lf",&w,&l);
+		cost = cost + w*l;
+	}
+	printf("%.7lf\n",cost*bigC);
+	return 0;
+}
