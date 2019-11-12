@@ -2,10 +2,7 @@
 #include <string.h>
 
 int main(int argc, char **argv)
-{/*(JAN, FEB, MAR, APR, MAY, JUN, JUL, AUG, SEP, OCT, NOV, DEC) 
-and 9 is the day of the month starting at 1. It should then determine 
-if this date represents 
-October 31 or December 25 (since 318=2510).*/
+{
 	char month[4];
 	int day;
 	scanf("%s %d",month,&day);
