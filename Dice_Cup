@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	int n,m;
+	scanf("%d %d",&n,&m);
+
+	if(n>=4 && n<=20 && m<=20 && m>=4){
+		int i,j;
+		int t=0;
+		int nxm=n*m;
+		int sumOfDices[nxm];
+		for(i=1;i<=n;i++){
+			for(j=1;j<=m;j++){
+				sumOfDices[t]=i+j;
+				t++;
+			}
+		}
+		for(i=0;i<nxm;i++){
+			printf("%d ",sumOfDices[i]);
+		}
+		
+		
+		return 0;
+	}else{
+		return 0;
+	}
+
+
+
+	/*int n,m,i;
+	scanf("%d %d",&n,&m);
+	if(n>=4 && n<=20 && m<=20 && m>=4){
+		int small,big;
+		if(n<m){
+			small=n;
+			big=m;
+		}else{
+			small=m;
+			big=n;
+		}
+		
+		for(i=small;i<big+1;i++){
+			printf("%d\n",i+1);
+		}
+		
+		return 0;
+	}else{
+		return 0;
+	}*/
+}
