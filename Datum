@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	int d,m,i,r;
+	scanf("%d %d",&d,&m);
+	int months[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+	int a=0;
+	int mon =0;
+	for(i=0;i<m-1;i++){
+		mon = mon + months[i];
+	}
+
+	a=d+mon-1;
+
+	r=a%7;
+	if(r==0){
+		printf("Thursday");
+	}else if(r==1){
+		printf("Friday");
+	}else if(r==2){
+		printf("Saturday");
+	}else if(r==3){
+		printf("Sunday");
+	}else if(r==4){
+		printf("Monday");
+	}else if(r==5){
+		printf("Tuesday");
+	}else if(r==6){
+		printf("Wednesday");
+	}else{
+		return 0;
+	}
+	printf("\n");
+	return 0;
+}
