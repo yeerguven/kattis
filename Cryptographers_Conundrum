@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main(int argc, char **argv)
+{
+	char letters[301];
+	int i = 0;
+	int k = 0;
+	scanf("%s",letters);
+	
+	
+	
+	while(letters[i]!='\0'){
+		if(i%3 == 0){
+			if(letters[i] != 'P'){
+				k++;
+			}
+		}else if(i%3 == 1){
+			if(letters[i] != 'E'){
+				k++;
+			}
+		}else{
+			if(letters[i] != 'R'){
+				k++;
+			}
+		}
+		i++;
+	}
+	printf("%d\n",k);
+	return 0;
+}
